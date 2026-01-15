@@ -1,0 +1,75 @@
+/* Start of Variables */
+
+/* End of Variables */
+
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+font-family: "Work Sans" , sans-serif;
+line-height: 1.5; /* تحسين القراءة */
+}
+
+html {
+  scroll-behavior: smooth; /* يخلي التنقل بين الروابط Smooth */
+  font-size: 16px; /* الأساس اللي بيتبني عليه الـ rem */
+}
+
+a {
+  text-decoration: none; /* يشيل الخط اللي تحت اللينكات */
+  /* color: inherit; يخلي لون اللينك زي النص */
+}
+
+ul, ol {
+  list-style: none; /* يشيل النقاط أو الأرقام الافتراضية */
+}
+/* End Global Rules */
+
+.parent {
+  background-color: #eee;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #aaa;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+.square {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  border-radius: 100% 50%;
+}
