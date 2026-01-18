@@ -2,6 +2,7 @@
 :root {
   --main-color: #10cab7;
   --secondary-color: #2c4755;
+  --background-color: #f6f6f6;
 }
 /* End of Variables */
 
@@ -39,6 +40,11 @@ ul, ol {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+section:not(.landing , .header) {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 /* End Global Rules */
 
@@ -100,7 +106,7 @@ ul, ol {
 .header .links ul{
   margin: 0;
   padding: 0;
-  background-color: #f6f6f6;
+  background-color: var(--background-color);
   position: absolute;
   right: 0;
   min-width: 200px;
@@ -160,15 +166,11 @@ ul, ol {
   line-height: 1.8;
   margin: 20px 0;
 }
-section:not(.landing , .header) {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 /* End Landing Section */
 
 /* Start Features */
 .features {
-  background-color: #f6f6f6;
+  background-color: var(--background-color);
 }
 .features .container {
   display: grid;
@@ -244,6 +246,35 @@ section:not(.landing , .header) {
 }
 /* End Services */
 
+/* Start Portfolio */
+.portfolio {
+  background-color: var(--background-color);
+}
+.portfolio .container .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 80px;
+}
+.portfolio .container .portfolio-grid .portfolio-cell {
+  display: flex;
+  flex-direction: column;
+}
+.portfolio .container .portfolio-grid .portfolio-cell img {
+  max-width: 100%;
+}
+.portfolio .container .portfolio-cell .portfolio-text {
+  background-color: white;
+  padding: 30px 20px 20px 20px;
+}
+.portfolio .container .portfolio-grid .portfolio-cell h3 {
+  margin-bottom: 15px;
+}
+.portfolio .container .portfolio-grid .portfolio-cell p {
+  line-height: 1.8;
+  color: #777;
+}
+/* End Portfolio */
 
 
 /* Small */
@@ -286,5 +317,3 @@ section:not(.landing , .header) {
     width: 1170px;
   }
 }
-
-/* Hi there nigga ok*/
